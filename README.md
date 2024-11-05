@@ -21,7 +21,7 @@ A plugin to control the FancyGotchi 2.0 menu in Pwnagotchi using a USB gamepad, 
 
 - Pwnagotchi device with FancyGotchi 2.0 installed
 - A compatible USB gamepad
-- Python dependencies (install via requirements.txt)
+- Python dependencies (evdev library)
 
 ## Installation
 
