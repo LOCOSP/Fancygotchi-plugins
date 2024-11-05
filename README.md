@@ -70,7 +70,3 @@ Once installed and configured, use the gamepad to navigate the FancyGotchi 2.0 m
 ## License
 
 This project is licensed under the GPL-3.0 License.
-
----
-
-Let me know if you'd like any specific adjustments!
