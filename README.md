@@ -61,6 +61,7 @@ Once installed and configured, use the gamepad to navigate the FancyGotchi 2.0 m
 
 - Ensure the `device_path` in `config.toml` points to the correct gamepad event.
 - Check logs for any unassigned button events or command issues.
+- Test your Game Pad usind `evtest /dev/input/event0` that value `/dev/input/event0` can be different for you.
 
 ## License
 
