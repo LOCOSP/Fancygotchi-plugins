@@ -3,7 +3,7 @@ Set of plugins for Fancygotchi 2.0
 
 ---------------------------------------------
 
-# Gamepad Control Plugin for Pwnagotchi
+# Gamepad Control Plugin for Pwnagotchi [pad-control.py](https://github.com/LOCOSP/Fancygotchi-plugins/blob/main/pad-control.py)
 
 A plugin to control the FancyGotchi 2.0 menu in Pwnagotchi using a USB gamepad, allowing seamless navigation with intuitive gamepad controls. The plugin supports basic directional and button-based commands to enhance user interaction with the FancyGotchi menu interface.
 
