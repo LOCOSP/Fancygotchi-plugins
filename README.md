@@ -33,7 +33,7 @@ A plugin to control the FancyGotchi 2.0 menu in Pwnagotchi using a USB gamepad, 
     Next go to custom-plugins folder:
     `cd /usr/local/share/pwnagotchi/custom-plugins/`
     and download RAW plugin script:
-    `sudo wget `
+    `sudo wget https://raw.githubusercontent.com/LOCOSP/Fancygotchi-plugins/refs/heads/main/pad-control.py`
 
 2. **Enable the Plugin**  
    Open your `config.toml` file and add the following entries:
