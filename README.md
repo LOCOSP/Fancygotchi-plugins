@@ -3,10 +3,6 @@ Set of plugins for Fancygotchi 2.0
 
 ---------------------------------------------
 
-Here's a sample `README.md` for your project:
-
----
-
 # Gamepad Control Plugin for Pwnagotchi
 
 A plugin to control the FancyGotchi 2.0 menu in Pwnagotchi using a USB gamepad, allowing seamless navigation with intuitive gamepad controls. The plugin supports basic directional and button-based commands to enhance user interaction with the FancyGotchi menu interface.
