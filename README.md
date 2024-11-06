@@ -70,3 +70,44 @@ Once installed and configured, use the gamepad to navigate the FancyGotchi 2.0 m
 ## License
 
 This project is licensed under the GPL-3.0 License.
+
+----------------------------------------------------
+
+
+
+# Watch how rich or how poor you are with OLED-CryptoStats [OLED-CryptoStats.py](https://github.com/LOCOSP/)
+
+## Screens
+
+![Screen 1](demo/OLEDCryptoStats01.png "Screen 1")
+![Screen 2](demo/OLEDCryptoStats02.png "Screen 2")
+
+1. **Install**  
+   Go to custom-plugins folder:
+    `cd /usr/local/share/pwnagotchi/custom-plugins/`
+    and download RAW plugin script:
+    `sudo wget https://raw.githubusercontent.com/LOCOSP/Fancygotchi-plugins/refs/heads/main/pad-control.py`
+
+
+2. **Enable the Plugin**  
+   Open your `config.toml` file and add the following entries:
+```toml
+main.plugins.OLED-CryptoStats.enabled = true
+main.plugins.OLED-CryptoStats.pairs = [
+ "BTCUSDT",
+ "ETHUSDT",
+]
+main.plugins.OLED-CryptoStats.update_interval = 300
+main.plugins.OLED-CryptoStats.display_interval = 15
+```
+you can add any number of pairs supported by Binance, in this version currencies paired with USDT are only supported.
+
+## Troubleshooting
+
+- Ensure the Internet connect is established.
+- Check if Binance API is available.
+- Check if pair is listed in Binance.
+
+## License
+
+This project is licensed under the GPL-3.0 License.
