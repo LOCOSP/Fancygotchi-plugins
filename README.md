@@ -75,7 +75,7 @@ This project is licensed under the GPL-3.0 License.
 
 
 
-# Watch how rich or how poor you are with OLED-CryptoStats [OLED-CryptoStats.py](https://github.com/LOCOSP/)
+# Watch how rich or how poor you are with OLED-CryptoStats [OLED-CryptoStats.py](https://github.com/LOCOSP/Fancygotchi-plugins/blob/main/OLED-plugins/OLED-CryptoStats.py)
 
 ## Screens
 
@@ -86,7 +86,7 @@ This project is licensed under the GPL-3.0 License.
    Go to custom-plugins folder:
     `cd /usr/local/share/pwnagotchi/custom-plugins/`
     and download RAW plugin script:
-    `sudo wget https://raw.githubusercontent.com/LOCOSP/Fancygotchi-plugins/refs/heads/main/pad-control.py`
+    `sudo wget https://raw.githubusercontent.com/LOCOSP/Fancygotchi-plugins/refs/heads/main/OLED-plugins/OLED-CryptoStats.py`
 
 
 2. **Enable the Plugin**  
