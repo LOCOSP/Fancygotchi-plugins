@@ -111,3 +111,34 @@ you can add any number of pairs supported by Binance, in this version currencies
 ## License
 
 This project is licensed under the GPL-3.0 License.
+
+----------------------------------------------------
+
+
+
+# Funny robot eyes looking around and infom you about new handshakes [OLED-eyes.py](https://github.com/LOCOSP/Fancygotchi-plugins/blob/main/OLED-plugins/OLED-eyes.py)
+
+
+
+1. **Install**  
+   Go to custom-plugins folder:
+    `cd /usr/local/share/pwnagotchi/custom-plugins/`
+    and download RAW plugin script:
+    `sudo wget https://raw.githubusercontent.com/LOCOSP/Fancygotchi-plugins/refs/heads/main/OLED-plugins/OLED-eyes.py`
+
+
+2. **Enable the Plugin**  
+   Open your `config.toml` file and add the following entries:
+   
+```toml
+main.plugins.OLED-eyes.enabled = true
+```
+
+
+## Troubleshooting
+
+- just check `pwnlog` if something is wrong
+
+## License
+
+This project is licensed under the GPL-3.0 License.
