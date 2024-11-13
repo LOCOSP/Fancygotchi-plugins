@@ -120,8 +120,8 @@ This project is licensed under the GPL-3.0 License.
 
 ## Demo
 
-![New Handshake emotion](/demo/IMG_7404.mov "Demo")
-![Looking around](/demo/IMG_7406.mov "Demo")
+![New Handshake emotion](/demo/handshake.gif "Demo")
+![Looking around](/demo/lookAround.gif "Demo")
 
 
 
