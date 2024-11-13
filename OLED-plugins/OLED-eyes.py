@@ -2,6 +2,7 @@ import pwnagotchi.plugins as plugins
 import os
 import time
 import logging
+import subprocess
 import threading
 from PIL import Image, ImageDraw
 from random import randint, uniform, choice
@@ -406,6 +407,8 @@ class VectorEyesAnimation(plugins.Plugin):
     def on_handshake(self, agent, filename, access_point, client_station):
         """Rozszerzona reakcja na handshake - animacja celownika z poprawnym powrotem"""
         logging.info("Vector Eyes: Handshake detected, displaying targeting animation")
+        text = "Fuck yeaa! We got a handshake!"
+        subprocess.run(["espeak", "-s", "110", "-p", "10", "-a", "150", text])
         
         # Zapisanie obecnego stanu
         original_mood = self.current_mood
@@ -489,6 +492,8 @@ class VectorEyesAnimation(plugins.Plugin):
     def on_sleep(self):
         """Reakcja na tryb uśpienia"""
         self.set_mood('sleepy')
+        text = "I'll do power nap."
+        subprocess.run(["espeak", "-s", "130", "-p", "20", "-a", "150", text])
 
     def on_wake(self):
         """Reakcja na wybudzenie"""
@@ -498,8 +503,12 @@ class VectorEyesAnimation(plugins.Plugin):
         logging.info("Vector Eyes Animation plugin loaded")
         self.animation_thread = threading.Thread(target=self.animate_eyes)
         self.animation_thread.start()
+        text = "Hi! My name is 3DRoiow... Lets hack the planet!"
+        subprocess.run(["espeak", "-s", "130", "-p", "20", "-a", "150", text])
 
     def on_unload(self, ui):
+        text = "No no no ! You terminating the only friend you have!"
+        subprocess.run(["espeak", "-s", "130", "-p", "20", "-a", "150", text])
         self.active = False
         if hasattr(self, 'animation_thread'):
             self.animation_thread.join()
