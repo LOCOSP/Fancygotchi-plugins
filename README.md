@@ -118,6 +118,11 @@ This project is licensed under the GPL-3.0 License.
 
 # Funny robot eyes looking around and infom you about new handshakes [OLED-eyes.py](https://github.com/LOCOSP/Fancygotchi-plugins/blob/main/OLED-plugins/OLED-eyes.py)
 
+## Demo
+
+![New Handshake emotion](/demo/IMG_7404.mov "Demo")
+![Looking around](/demo/IMG_7406.mov "Demo")
+
 
 
 1. **Install**  
@@ -129,7 +134,7 @@ This project is licensed under the GPL-3.0 License.
 
 2. **Enable the Plugin**  
    Open your `config.toml` file and add the following entries:
-   
+
 ```toml
 main.plugins.OLED-eyes.enabled = true
 ```
