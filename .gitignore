@@ -1,0 +1,16 @@
+OLED-plugins/oled-animation.zip
+OLED-plugins/oled-animation/oled-animation.py
+OLED-plugins/.DS_Store
+OLED-plugins/oled-animation/.DS_Store
+OLED-plugins/oled-animation/reactions/.DS_Store
+OLED-plugins/oled-animation/reactions/config.py
+OLED-plugins/oled-animation/reactions/deauth.gif
+OLED-plugins/oled-animation/reactions/handshake.gif
+OLED-plugins/oled-animation/reactions/hs1.gif
+OLED-plugins/oled-animation/reactions/hs2.gif
+OLED-plugins/oled-animation/reactions/on_load.gif
+OLED-plugins/oled-animation/reactions/on_load2.gif
+OLED-plugins/oled-animation/reactions/sauron.gif
+OLED-plugins/oled-animation/reactions/training.gif
+OLED-plugins/oled-animation/reactions/vb1.gif
+.DS_Store
