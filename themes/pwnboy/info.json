@@ -1,0 +1,7 @@
+{
+  "author": "<a href='https://github.com/RasTacsko'>RasTacsko</a>",
+  "version": "1.0.0",
+  "display": "displayhatmini",
+  "plugins": "memtemp.py, bt-tether.py",
+  "notes": "memtemp.py needs to be put in vertical mode. Images made by <a href='https://github.com/JD-2006'>JD-2006</a>"
+}
