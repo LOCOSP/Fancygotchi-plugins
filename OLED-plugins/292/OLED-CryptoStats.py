@@ -77,16 +77,25 @@ class OLEDBTCPrice(plugins.Plugin):
         if not self.prices or not self.running:
             return
 
+        # Bezpieczne pobranie par
+        pairs = self.options.get('pairs', self.__defaults__['pairs'])
+        if not pairs:
+            logging.error("No pairs configured in plugin options.")
+            return
+
         current_time = time.time()
         if current_time - self.last_display_update >= self.options.get('display_interval', self.__defaults__['display_interval']):
-            pairs = self.options.get('pairs', self.__defaults__['pairs'])
             self.current_pair_index = (self.current_pair_index + 1) % len(pairs)
             self.last_display_update = current_time
 
         current_pair = pairs[self.current_pair_index]
         current_price = self.prices.get(current_pair)
         last_price = self.last_prices.get(current_pair)
-        
+
+        if current_price is None:
+            logging.warning(f"No price data available for {current_pair}")
+            return
+
         symbol = current_pair[:3]
         arrow = "↑" if last_price and current_price > last_price else "↓"
         price_str = f"${current_price:.2f}"
@@ -114,6 +123,7 @@ class OLEDBTCPrice(plugins.Plugin):
 
         self.oled_left.display(image_left)
         self.oled_right.display(image_right)
+
 
 
     def on_unload(self, ui):

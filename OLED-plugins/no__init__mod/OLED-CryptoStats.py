@@ -6,7 +6,7 @@ import requests
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 import pwnagotchi.plugins as plugins
-from pwnagotchi.ui.hw.libs.i2coled.epd import EPD
+from pwnagotchi.ui.hw.libs.i2coled.oled import OLED
 
 class OLEDBTCPrice(plugins.Plugin):
     __author__ = 'https://github.com/LOCOSP'
@@ -36,11 +36,11 @@ class OLEDBTCPrice(plugins.Plugin):
         self.price_font = ImageFont.truetype(f'{self.plugin_dir}/OLEDstats/CyborgPunk.ttf', 14)
         self.arrow_font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 20)
 
-        self.oled_left = EPD(address=0x3C, width=self.WIDTH, height=self.HEIGHT)
+        self.oled_left = OLED(address=0x3C, width=self.WIDTH, height=self.HEIGHT)
         self.oled_left.Init()
         self.oled_left.Clear()
         
-        self.oled_right = EPD(address=0x3D, width=self.WIDTH, height=self.HEIGHT)
+        self.oled_right = OLED(address=0x3D, width=self.WIDTH, height=self.HEIGHT)
         self.oled_right.Init()
         self.oled_right.Clear()
 
@@ -73,20 +73,29 @@ class OLEDBTCPrice(plugins.Plugin):
                 self.last_price_update = current_time
             time.sleep(1)
 
-    def on_ui_update(self, ui):
+        def on_ui_update(self, ui):
         if not self.prices or not self.running:
+            return
+
+        # Bezpieczne pobranie par
+        pairs = self.options.get('pairs', self.__defaults__['pairs'])
+        if not pairs:
+            logging.error("No pairs configured in plugin options.")
             return
 
         current_time = time.time()
         if current_time - self.last_display_update >= self.options.get('display_interval', self.__defaults__['display_interval']):
-            pairs = self.options.get('pairs', self.__defaults__['pairs'])
             self.current_pair_index = (self.current_pair_index + 1) % len(pairs)
             self.last_display_update = current_time
 
         current_pair = pairs[self.current_pair_index]
         current_price = self.prices.get(current_pair)
         last_price = self.last_prices.get(current_pair)
-        
+
+        if current_price is None:
+            logging.warning(f"No price data available for {current_pair}")
+            return
+
         symbol = current_pair[:3]
         arrow = "↑" if last_price and current_price > last_price else "↓"
         price_str = f"${current_price:.2f}"
